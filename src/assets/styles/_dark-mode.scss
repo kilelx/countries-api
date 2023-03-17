@@ -1,0 +1,22 @@
+$light-background: hsl(0, 0%, 98%);
+$light-text: hsl(200, 15%, 8%);
+$light-input: hsl(0, 0%, 52%);
+$dark-elements: hsl(209, 23%, 22%);
+$dark-background: hsl(207, 26%, 17%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+    color: $light-text;
+    background-color: $light-background;
+    .bg {
+        background-color: $white;
+    }
+}
+
+[data-theme="dark"] {
+    color: $white;
+    background-color: $dark-background;
+    .bg {
+        background-color: $dark-elements;
+    }
+}

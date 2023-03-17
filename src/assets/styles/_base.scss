@@ -1,0 +1,60 @@
+$light-background: hsl(0, 0%, 98%);
+$light-text: hsl(200, 15%, 8%);
+$light-input: hsl(0, 0%, 52%);
+$dark-elements: hsl(209, 23%, 22%);
+$dark-background: hsl(207, 26%, 17%);
+$white: hsl(0, 0%, 100%);
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include m {
+        max-width: 720px;
+    }
+    @include l {
+        max-width: 1200px;
+    }
+}
+
+/* === FLEX === */
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.al-center {
+    align-items: center;
+}
+
+/* === DARK MODE === */
+:root {
+    color: $light-text;
+    background-color: $light-background;
+    .bg {
+        background-color: $white;
+    }
+}
+
+[data-theme="dark"] {
+    color: $white;
+    background-color: $dark-background;
+    .bg {
+        background-color: $dark-elements;
+    }
+}

@@ -1,0 +1,53 @@
+@import './fonts';
+@import './dark-mode';
+@import './media-queries';
+@import './base';
+
+/* Navigation */
+nav {
+    padding: 16px 0;
+
+    .toggle--wrapper {
+        gap: 4px;
+        font-weight: 600;
+        .toggle--theme {
+            position: relative;
+            display: inline-block;
+            height: 22px;
+            width: 42px;
+            input {
+                display: none;
+            }
+            .slider {
+                background-color: #ccc;
+                position: absolute;
+                cursor: pointer;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                transition: .2s;
+                border-radius: 20px;
+                &::before {
+                    content: "";
+                    background-color: #fff;
+                    top: 3px;
+                    left: 3px;
+                    height: 17px;
+                    width: 17px;
+                    position: absolute;
+                    transition: 0.4s;
+                    border-radius: 50%;
+                }
+            }
+            input:checked {
+                & + .slider {
+                    background-color: $dark-background;
+                    &::before {
+                        transform: translateX(20px);
+                    }
+                }
+            }
+        }
+    }
+}

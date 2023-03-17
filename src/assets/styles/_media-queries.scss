@@ -1,0 +1,20 @@
+/* Landscape phones and down */
+@mixin s {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+
+  /* Tablet devices */
+  @mixin m {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+/* Large desktops */
+  @mixin l {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
