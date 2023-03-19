@@ -24,6 +24,7 @@ const DarkMode = () => {
     // Is dark mode enabled by default?
     const defaultDark = storedTheme === "dark" || (storedTheme === null && prefersDark);
 
+    // useEffect to check the checkbox once the DOM is loaded
     useEffect(() => {
         if (defaultDark) {
             // console.log(toggleRef.current.checked);
